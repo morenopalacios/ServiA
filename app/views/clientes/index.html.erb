@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre completo</th>
+      <th>Tipo doc</th>
+      <th>Documento</th>
+      <th>Telefono</th>
+      <th>Cantidad auto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.nombre_completo %></td>
+        <td><%= cliente.tipo_doc.nombre rescue nil %></td>
+        <td><%= cliente.documento %></td>
+        <td><%= cliente.telefono %></td>
+        <td><%= cliente.cantidad_auto %></td>
+        <td><%= link_to 'Ver', cliente %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cliente', new_cliente_path %>

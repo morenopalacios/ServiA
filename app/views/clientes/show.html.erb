@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre completo:</strong>
+  <%= @cliente.nombre_completo %>
+</p>
+
+<p>
+  <strong>Tipo doc:</strong>
+  <%= @cliente.tipo_doc.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @cliente.documento %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @cliente.telefono %>
+</p>
+
+<p>
+  <strong>Cantidad auto:</strong>
+  <%= @cliente.cantidad_auto %>
+</p>
+
+<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
+<%= link_to 'Back', clientes_path %>

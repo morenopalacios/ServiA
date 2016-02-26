@@ -1,0 +1,42 @@
+<%= form_for(@servicio) do |f| %>
+  <% if @servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servicio.errors.count, "error") %> prohibited this servicio from being saved:</h2>
+
+      <ul>
+      <% @servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cambio_aceite %><br>
+    <%= f.text_field :cambio_aceite %>
+  </div>
+  <div class="field">
+    <%= f.label :alineacion_balanceo %><br>
+    <%= f.text_field :alineacion_balanceo %>
+  </div>
+  <div class="field">
+    <%= f.label :reparación_automotriz %><br>
+    <%= f.text_field :reparación_automotriz %>
+  </div>
+  <div class="field">
+    <%= f.label :mantenimiento %><br>
+    <%= f.text_field :mantenimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :electricidad %><br>
+    <%= f.text_field :electricidad %>
+  </div>
+  <div class="field">
+     auto <br>
+    <%= f.collection_select :auto_id, Auto.all, :id, :placa, class: "form-control",     prompt: "Seleccione auto"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

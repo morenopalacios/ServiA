@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cambio aceite:</strong>
+  <%= @servicio.cambio_aceite %>
+</p>
+
+<p>
+  <strong>Alineacion balanceo:</strong>
+  <%= @servicio.alineacion_balanceo %>
+</p>
+
+<p>
+  <strong>Reparación automotriz:</strong>
+  <%= @servicio.reparación_automotriz %>
+</p>
+
+<p>
+  <strong>Mantenimiento:</strong>
+  <%= @servicio.mantenimiento %>
+</p>
+
+<p>
+  <strong>Electricidad:</strong>
+  <%= @servicio.electricidad %>
+</p>
+
+<p>
+  <strong>Auto:</strong>
+  <%= @servicio.auto.placa %>
+</p>
+
+<%= link_to 'Editar', edit_servicio_path(@servicio) %> |
+<%= link_to 'Atras', servicios_path %>

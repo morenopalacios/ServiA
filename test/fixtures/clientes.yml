@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_completo: MyString
+  tipo_doc_id: 
+  documento: MyString
+  telefono: MyString
+  cantidad_auto: 1
+
+two:
+  nombre_completo: MyString
+  tipo_doc_id: 
+  documento: MyString
+  telefono: MyString
+  cantidad_auto: 1

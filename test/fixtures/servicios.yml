@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cambio_aceite: 1.5
+  alineacion_balanceo: 1.5
+  reparación_automotriz: 1.5
+  mantenimiento: 1.5
+  electricidad: 1.5
+  auto_id: 
+
+two:
+  cambio_aceite: 1.5
+  alineacion_balanceo: 1.5
+  reparación_automotriz: 1.5
+  mantenimiento: 1.5
+  electricidad: 1.5
+  auto_id: 

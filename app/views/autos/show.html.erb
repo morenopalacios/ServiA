@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @auto.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @auto.modelo %>
+</p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @auto.placa %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @auto.cliente.nombre_completo %>
+</p>
+
+<%= link_to 'Editar', edit_auto_path(@auto) %> |
+<%= link_to 'Atras', autos_path %>
