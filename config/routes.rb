@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :relacions
+  resources :estados
   resources :clientes
   resources :servicios
   resources :autos

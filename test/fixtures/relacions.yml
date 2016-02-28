@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  auto_id: 
+  servicio_id: 
+  estado_id: 
+
+two:
+  auto_id: 
+  servicio_id: 
+  estado_id: 

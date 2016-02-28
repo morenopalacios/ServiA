@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Auto:</strong>
+  <%= @relacion.auto %>
+</p>
+
+<p>
+  <strong>Servicio:</strong>
+  <%= @relacion.servicio %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @relacion.estado %>
+</p>
+
+<%= link_to 'Edit', edit_relacion_path(@relacion) %> |
+<%= link_to 'Back', relacions_path %>

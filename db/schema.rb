@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226175348) do
+ActiveRecord::Schema.define(version: 20160228051817) do
 
   create_table "autos", force: :cascade do |t|
     t.string   "marca"
@@ -35,6 +35,24 @@ ActiveRecord::Schema.define(version: 20160226175348) do
   end
 
   add_index "clientes", ["tipo_doc_id"], name: "index_clientes_on_tipo_doc_id"
+
+  create_table "estados", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relacions", force: :cascade do |t|
+    t.integer  "auto_id"
+    t.integer  "servicio_id"
+    t.integer  "estado_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "relacions", ["auto_id"], name: "index_relacions_on_auto_id"
+  add_index "relacions", ["estado_id"], name: "index_relacions_on_estado_id"
+  add_index "relacions", ["servicio_id"], name: "index_relacions_on_servicio_id"
 
   create_table "servicios", force: :cascade do |t|
     t.float    "cambio_aceite"
