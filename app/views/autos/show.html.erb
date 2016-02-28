@@ -17,7 +17,7 @@
 
 <p>
   <strong>Cliente:</strong>
-  <%= @auto.cliente.nombre_completo %>
+  <%= @auto.cliente.nombre_completo rescue nil%>
 </p>
 
 <%= link_to 'Editar', edit_auto_path(@auto) %> |

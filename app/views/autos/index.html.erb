@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Autos</h1>
+<h1>Lista Autos</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
-    <tr>
+    <tr class="active">
       <th>Marca</th>
       <th>Modelo</th>
       <th>Placa</th>
       <th>Cliente</th>
-      <th colspan="3"></th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
@@ -19,10 +19,10 @@
         <td><%= auto.marca %></td>
         <td><%= auto.modelo %></td>
         <td><%= auto.placa %></td>
-        <td><%= auto.cliente.nombre_completo %></td>
-        <td><%= link_to 'Show', auto %></td>
-        <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
-        <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= auto.cliente.nombre_completo rescue nil%></td>
+        <td><%= link_to 'Ver', auto %></td>
+        <td><%= link_to 'Editar', edit_auto_path(auto) %></td>
+        <td><%= link_to 'Eliminar', auto, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Auto', new_auto_path %>
+<%= link_to 'Nuevo Registro', new_auto_path %>

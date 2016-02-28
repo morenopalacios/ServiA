@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Cambio aceite:</strong>
   <%= @servicio.cambio_aceite %>
@@ -27,8 +28,15 @@
 
 <p>
   <strong>Auto:</strong>
-  <%= @servicio.auto.placa %>
+  <%= @servicio.auto.placa rescue nil %>
 </p>
 
 <%= link_to 'Editar', edit_servicio_path(@servicio) %> |
-<%= link_to 'Atras', servicios_path %>
+<%= link_to 'Atras', servicios_path  %> 
+
+</div>
+</form> <br><br><br><br><br><br><br>
+
+<button type="button" class="btn btn-info">Generar Factura</button>
+
+

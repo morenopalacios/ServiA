@@ -13,30 +13,32 @@
 
   <div class="field">
     <%= f.label :cambio_aceite %><br>
-    <%= f.text_field :cambio_aceite, :placeholder => "placeholder text" %>
+    <%= f.text_field :cambio_aceite, :placeholder => "$ ingrese precio" %>
   </div>
   <div class="field">
     <%= f.label :alineacion_balanceo %><br>
-    <%= f.text_field :alineacion_balanceo %>
+    <%= f.text_field :alineacion_balanceo, :placeholder => "$ ingrese precio"%>
   </div>
   <div class="field">
     <%= f.label :reparación_automotriz %><br>
-    <%= f.text_field :reparación_automotriz %>
+    <%= f.text_field :reparación_automotriz, :placeholder => "$ ingrese precio" %>
   </div>
   <div class="field">
     <%= f.label :mantenimiento %><br>
-    <%= f.text_field :mantenimiento %>
+    <%= f.text_field :mantenimiento, :placeholder => "$ ingrese precio"%>
   </div>
   <div class="field">
     <%= f.label :electricidad %><br>
-    <%= f.text_field :electricidad %>
+    <%= f.text_field :electricidad, :placeholder => "$ ingrese precio"%>
   </div>
   <div class="field">
-     auto <br>
-    <%= f.collection_select :auto_id, Auto.all, :id, :placa, class: "form-control",     prompt: "Seleccione auto"%>
+     Automovil <br>
+    <%= f.collection_select :auto_id, Auto.all, :id, :placa, class: "form-control",     prompt: "Seleccione placa"%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar" %>
+    
+
   </div>
 <% end %>
