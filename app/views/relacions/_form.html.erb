@@ -11,19 +11,23 @@
     </div>
   <% end %>
 
+  
+
   <div class="field">
-    <%= f.label :auto_id %><br>
-    <%= f.text_field :auto_id %>
+     Automovil <br>
+    <%= f.collection_select :auto_id, Auto.all, :id, :placa, class: "form-control",     prompt: "Seleccione placa" %>
   </div>
   <div class="field">
     <%= f.label :servicio_id %><br>
     <%= f.text_field :servicio_id %>
   </div>
   <div class="field">
-    <%= f.label :estado_id %><br>
-    <%= f.text_field :estado_id %>
+    Estado<br>
+    <%= f.collection_select :estado_id, Estado.all, :id, :nombre, class: "form-control",     prompt: "Seleccione estado" %>
   </div>
+  
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar", class: "btn btn-info btn-xs"%>
   </div>
 <% end %>

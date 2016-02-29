@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Relacions</h1>
+<h1>Lista Reporte</h1>
 
 <table class="table table-bordered">
   <thead >
@@ -8,19 +8,19 @@
       <th>Auto</th>
       <th>Servicio</th>
       <th>Estado</th>
-      <th colspan="3"></th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
   <tbody>
     <% @relacions.each do |relacion| %>
       <tr>
-        <td><%= relacion.auto %></td>
+        <td><%= relacion.auto.placa rescue nil %></td>
         <td><%= relacion.servicio %></td>
-        <td><%= relacion.estado %></td>
-        <td><%= link_to 'Show', relacion %></td>
-        <td><%= link_to 'Edit', edit_relacion_path(relacion) %></td>
-        <td><%= link_to 'Destroy', relacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= relacion.estado.nombre rescue nil %></td>
+        <td><%= link_to 'Imprimir', relacion, class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_relacion_path(relacion), class: "btn btn-warning btn-xs" %></td>
+        <td><%= link_to 'Eliminar', relacion, method: :delete, data: { confirm: 'Esta seguro?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Relacion', new_relacion_path %>
+<%= button_to 'Ingresar Registro', new_relacion_path, :method=>"get", class: "btn btn-primary btn-xs" %>

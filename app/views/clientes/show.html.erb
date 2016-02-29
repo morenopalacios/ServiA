@@ -20,10 +20,6 @@
   <%= @cliente.telefono %>
 </p>
 
-<p>
-  <strong>Cantidad auto:</strong>
-  <%= @cliente.cantidad_auto %>
-</p>
 
-<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
-<%= link_to 'Atras', clientes_path %>
+<%= link_to 'Editar', edit_cliente_path(@cliente), class: "btn btn-warning btn-xs" %> |
+<%= link_to 'Atras', clientes_path, class: "btn btn-default btn-xs" %>

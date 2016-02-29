@@ -20,5 +20,5 @@
   <%= @auto.cliente.nombre_completo rescue nil%>
 </p>
 
-<%= link_to 'Editar', edit_auto_path(@auto) %> |
-<%= link_to 'Atras', autos_path %>
+<%= link_to 'Editar', edit_auto_path(@auto), class: "btn btn-warning btn-xs" %> |
+<%= link_to 'Atras', autos_path, class: "btn btn-default btn-xs" %>

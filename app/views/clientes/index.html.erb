@@ -6,10 +6,9 @@
   <thead>
     <tr class="active">
       <th>Nombre completo</th>
-      <th>Tipo doc</th>
+      <th>Tipo documento</th>
       <th>Documento</th>
       <th>Telefono</th>
-      <th>Cantidad auto</th>
       <th colspan="3">Acciones</th>
     </tr>
   </thead>
@@ -21,10 +20,9 @@
         <td><%= cliente.tipo_doc.nombre rescue nil %></td>
         <td><%= cliente.documento %></td>
         <td><%= cliente.telefono %></td>
-        <td><%= cliente.cantidad_auto %></td>
-        <td><%= link_to 'Ver', cliente %></td>
-        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <td><%= link_to 'Ver', cliente, class: "btn btn-success btn-xs"  %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente), class: "btn btn-warning btn-xs" %></td>
+        <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Esta seguro?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +30,5 @@
 
 <br>
 
-<%= link_to 'Nuevo Registro', new_cliente_path %>
+
+<%= button_to 'Nuevo Registro', new_cliente_path, :method=>"get", class: "btn btn-primary btn-xs" %> 

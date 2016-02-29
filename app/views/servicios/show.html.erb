@@ -31,12 +31,11 @@
   <%= @servicio.auto.placa rescue nil %>
 </p>
 
-<%= link_to 'Editar', edit_servicio_path(@servicio) %> |
-<%= link_to 'Atras', servicios_path  %> 
+<%= link_to 'Editar', edit_servicio_path(@servicio), class: "btn btn-warning btn-xs" %> |
+<%= link_to 'Atras', servicios_path, class: "btn btn-default btn-xs"   %> 
 
 </div>
-</form> <br><br><br><br><br><br><br>
+</form> 
 
-<button type="button" class="btn btn-info">Generar Factura</button>
 
 

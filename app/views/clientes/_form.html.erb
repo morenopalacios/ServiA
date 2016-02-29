@@ -18,7 +18,7 @@
  
   <div class="field">
      Tipo de documento <br>
-    <%= f.collection_select :tipo_doc_id, Tipodoc.all, :id, :nombre, class: "form-control",     prompt: "Seleccione documento" %>
+    <%= f.collection_select :tipo_doc_id, Tipodoc.all, :id, :nombre, class: "form-control",     prompt: "Seleccione tipo documento" %>
 </div>
   <div class="field">
     <%= f.label :documento %><br>
@@ -28,11 +28,7 @@
     <%= f.label :telefono %><br>
     <%= f.text_field :telefono %>
   </div>
-  <div class="field">
-    <%= f.label :cantidad_auto %><br>
-    <%= f.number_field :cantidad_auto %>
-  </div>
   <div class="actions">
-    <%= f.submit "Guardar"%>
+    <%= f.submit "Guardar", class: "btn btn-info btn-xs" %>
   </div>
 <% end %>
